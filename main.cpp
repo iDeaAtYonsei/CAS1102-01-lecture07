@@ -46,12 +46,12 @@ int main() {
 
     Node* nameHead = nullptr;
     Node* nameTail = nullptr;
-    makeList("MyName", nameHead, nameTail); // You can freely change the input parameter as your name.
+    makeList("이도엽", nameHead, nameTail); // You can freely change the input parameter as your name.
 
 
     // TODO: Connect the two linked lists so that printing them together
     // printList function should display "Hello {yourName}" in one line.
-
+    helloTail->next = nameHead;
 
     printList(helloHead);
 
