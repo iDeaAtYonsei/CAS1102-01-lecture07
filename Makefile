@@ -1,6 +1,6 @@
 
 CXX      := g++
-CXXFLAGS := -std=c++23 -O2 -Wall -Wextra -pedantic
+CXXFLAGS :=  -O2 -Wall -Wextra -pedantic
 LDFLAGS  :=
 TARGET   := main
 
