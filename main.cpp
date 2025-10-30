@@ -4,7 +4,11 @@
 // TODO: Define a struct named "Node".
 // The struct should include a single character ch followed by a pointer, which will indicate the next Node.
 // Think of it as one link in a chain of characters.
+<<<<<<< Updated upstream
 struct Node{
+=======
+struct {
+>>>>>>> Stashed changes
     char ch;
     Node* next;
 };
@@ -16,10 +20,17 @@ void makeList(const char* s, Node*& head, Node*& tail) {
     head = nullptr;
     tail = nullptr;
 
+<<<<<<< Updated upstream
     for(int i = 0; s[i] != '\0'; ++i){
         Node* newNode = new Node{s[i], nullptr};
 
         if(head == nullptr){
+=======
+    for (int i = 0; s[i] != '\0'; ++i){
+        Node* newNode = new Node{s[i], nullptr};
+
+        if (head == nullptr){
+>>>>>>> Stashed changes
             head = newNode;
             tail = newNode;
         } else{
