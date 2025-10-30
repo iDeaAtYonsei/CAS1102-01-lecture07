@@ -9,7 +9,26 @@
 // TODO: Implement the makeList function.
 // It should start with empty head and tail pointers.
 // Then, go through the given string to create and connect each Node in order.
+struct Node {
+    char ch;
+    Node* next;
+};
+
 void makeList(const char* s, Node*& head, Node*& tail) {
+    head = nullptr;
+    tail = nullptr;
+    for (const char* p = s; *p != '\0'; ++p) {
+        Node* newNode = new Node;
+        newNode->ch = *p;
+        newNode->next = nullptr;
+        if (head == nullptr) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
 
 }
 
@@ -29,7 +48,8 @@ int main() {
 
     Node* nameHead = nullptr;
     Node* nameTail = nullptr;
-    makeList("MyName", nameHead, nameTail); // You can freely change the input parameter as your name.
+    makeList("Minjung Kim", nameHead, nameTail); // You can freely change the input parameter as your name.
+    helloTail->next = nameHead;
 
 
     // TODO: Connect the two linked lists so that printing them together
