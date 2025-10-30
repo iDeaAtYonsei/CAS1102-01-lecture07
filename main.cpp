@@ -18,18 +18,18 @@ void makeList(const char* s, Node*& head, Node*& tail) {
     head = nullptr;
     tail = nullptr;
 
-    for (int i = 0; s[i] != '\0'; i++) {   // loop through the string until null terminator
-        Node* newNode = new Node;          // make a new node
-        newNode->ch = s[i];                // store the character
-        newNode->next = nullptr;           // end of list for now
+    for (int i = 0; s[i] != '\0'; i++) {   
+        Node* newNode = new Node;          
+        newNode->ch = s[i];                
+        newNode->next = nullptr;           
 
-        if (head == nullptr) {             // if first node
-            head = newNode;                // set head
+        if (head == nullptr) {             
+            head = newNode;                
             tail = newNode;
         } 
         else {
-            tail->next = newNode;          // link previous to new
-            tail = newNode;                // move tail forward
+            tail->next = newNode;          
+            tail = newNode;                
         }
     }
 }
@@ -51,7 +51,7 @@ int main() {
 
     Node* nameHead = nullptr;
     Node* nameTail = nullptr;
-    makeList("MyName", nameHead, nameTail); // You can freely change the input parameter as your name.
+    makeList("Hams", nameHead, nameTail); // You can freely change the input parameter as your name.
 
 
     // TODO: Connect the two linked lists so that printing them together
