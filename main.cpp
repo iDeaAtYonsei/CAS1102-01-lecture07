@@ -52,7 +52,7 @@ int main() {
     // TODO: Connect the two linked lists so that printing them together
     // printList function should display "Hello {yourName}" in one line.
     if (helloTail != nullptr) {
-        helloTail->next = nameHead;   // 두 리스트 연결
+        helloTail->next = nameHead; 
     }
 
     printList(helloHead);
