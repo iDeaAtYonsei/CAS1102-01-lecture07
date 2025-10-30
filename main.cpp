@@ -4,13 +4,30 @@
 // TODO: Define a struct named "Node".
 // The struct should include a single character ch followed by a pointer, which will indicate the next Node.
 // Think of it as one link in a chain of characters.
+struct Node {
+    char ch;
+    Node* next;
+    Node(char c) : ch(c), next(nullptr) {}
+};
+
 
 
 // TODO: Implement the makeList function.
 // It should start with empty head and tail pointers.
 // Then, go through the given string to create and connect each Node in order.
 void makeList(const char* s, Node*& head, Node*& tail) {
+    head = nullptr;
+    tail = nullptr;
 
+    for (int i = 0; s[i] != '\0'; ++i) {
+        Node* newNode = new Node(s[i]);
+        if (head == nullptr) {
+            head = tail = newNode;  // 첫 노드
+        } else {
+            tail->next = newNode;   // 새 노드 연결
+            tail = newNode;         // tail 갱신
+        }
+    }
 }
 
 void printList(Node* head) {
@@ -29,12 +46,12 @@ int main() {
 
     Node* nameHead = nullptr;
     Node* nameTail = nullptr;
-    makeList("MyName", nameHead, nameTail); // You can freely change the input parameter as your name.
+    makeList("이도엽", nameHead, nameTail); // You can freely change the input parameter as your name.
 
 
     // TODO: Connect the two linked lists so that printing them together
     // printList function should display "Hello {yourName}" in one line.
-
+    helloTail->next = nameHead;
 
     printList(helloHead);
 
