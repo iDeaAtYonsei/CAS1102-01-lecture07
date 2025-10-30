@@ -46,7 +46,7 @@ int main() {
 
     Node* nameHead = nullptr;
     Node* nameTail = nullptr;
-    makeList("MyName", nameHead, nameTail); // You can freely change the input parameter as your name.
+    makeList("Yong Hyeon", nameHead, nameTail); // You can freely change the input parameter as your name.
 
 
     // TODO: Connect the two linked lists so that printing them together
