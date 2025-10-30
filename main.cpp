@@ -7,6 +7,7 @@
 struct Node {
     char ch;
     Node* next;
+
 };
 
 // TODO: Implement the makeList function.
